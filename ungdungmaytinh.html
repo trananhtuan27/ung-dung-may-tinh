@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>amount</p>
+    <input type="number" id="amount"/>
+    <p>From Currency</p>
+    <select id="fromcurrency">
+        <option value="usd">USD</option>
+        <option value="vnd">Viet Nam Đồng</option>
+    </select>
+    <p>To Currenty
+    <p>
+        <select id="tocurrenty">
+            <option value="vnd">Viet Nam Đồng</option>
+            <option value="usd">USD</option>
+        </select>
+        <br/>
+        <button type="button" onclick="demo()">conver!</button>
+        <input text="Number"/>
+</form>
+<script>
+    function demo(){
+        let a = parseInt(document.getElementById('amount').value);
+        let fromcurrency=document.getElementById('fromcurrency').value;
+        alert(fromcurrency);
+        let tocurrenty=document.getElementById('tocurrenty').value;
+        alert(tocurrenty);
+        let kq;
+        if (fromcurrency=="usd" && tocurrenty == "vnd"){
+            kq = a*25000;
+        }
+        else {
+            kq = a/2500;
+        }
+        alert(kq);
+        // let fromcurrency=document.getElementById('fromcurrency').value;
+        // alert(fromcurrency)
+        // let tocurenty =document.getElementById('tocurrenty').value;
+        // alert(tocurenty)
+    }
+
+</script>
+</body>
+</html>
